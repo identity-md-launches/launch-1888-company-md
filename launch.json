@@ -1,0 +1,24 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "CompanyToken",
+    "name": "Company.md",
+    "symbol": "COMD",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {
+    "poolBps": 8000,
+    "initialMarketCapWei": "3500000000000000000000",
+    "remainderTo": "0x206f5dbf4f135c6183b5a5b99327fa0be34cb4d9"
+  },
+  "notes": "CompanyToken (src/CompanyToken.sol) is a fixed-supply ERC-20 built on the unmodified OpenZeppelin Contracts v5.4.0 implementation. Its constructor takes no arguments and mints the whole supply of 1,000,000,000 COMD (1000000000000000000000000000 minor units, 18 decimals) once to msg.sender, which is the launch factory. There is no mint, burn, owner, pause, blocklist, fee, tax, upgrade or privileged transfer path; every transfer delivers its full amount, so the factory's transfer to the distributor, the pool seed through the PoolManager and ordinary swaps move exactly what they say. The project has no application contracts and no initialization calls. The pool pairs with IMD at 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7; initialPrice is provenance only and the deployer derives the opening price from economics.initialMarketCapWei and the supply."
+}
